@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Clientes{% endblock %}
+
+{% block conteudo %}
+	<h3>Listar Clientes</h3>
+
+	<table class="table table-hover table-bordered table-striped table-dark">
+		<tr>
+			<th>Nome</th> 
+			<th>Sobrenome</th> 
+			<th>CPF</th> 
+			<th>Telefone</th> 
+			<th>Endereço</th> 
+			<th>Email</th> 
+			<th>Cidade</th> 
+			<th>Estado</th> 
+			<th>Valor de Crédito</th> 
+			<th>Ação</th> 
+		</tr>
+	
+		<tbody>
+			{% for clientes in cliente %}	
+				<tr>
+					<td>{{ clientes.nome }}</td> 
+					<td>{{ clientes.sobrenome }}</td> 
+					<td>{{ clientes.cpf }}</td>
+					<td>{{ clientes.telefone }}</td>
+					<td>{{ clientes.endereco }}</td>
+					<td>{{ clientes.email }}</td>
+					<td>{{ clientes.cidade }}</td>
+					<td>{{ clientes.estado }}</td>
+					<td>{{ clientes.valorcredito }}</td>
+					<td>
+						<a href="{% url 'atualiza_cliente' pk=clientes.id %}">Atualizar</a>
+						<a href="{% url 'deleta_cliente' pk=clientes.id %}">Excluir</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

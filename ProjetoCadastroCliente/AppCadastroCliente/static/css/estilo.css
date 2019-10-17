@@ -1,0 +1,23 @@
+tr, th,td 
+{
+	border: 1px solid #000000;
+}
+
+div.container-fluid {
+
+}
+
+div.container {
+	text-align: center;
+	background: #DCDCDC;
+}
+
+tr.titulotabela{
+	text-align: center;
+	font-size: 25px
+}
+
+nav{
+	display: flex;
+	justify-content: center;
+}

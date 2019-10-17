@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Sistema para cadastro de clientes{% endblock %}
+
+{% block conteudo %}
+	<h3>Cadastrar Clientes</h3>
+	<p>Cadastre aqui para um novo cliente</p>
+    <p><a href="{% url 'cadastra_cliente' %}">Novo Cliente</a></p>
+
+	<h3>Listar Clientes</h3>
+	<p>Veja aqui a lista de clientes cadastrados.</p>
+    <p><a href="{% url 'lista_cliente' %}">Lista de Clientes</a></p>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Atualiza Funcionário{% endblock %}
+
+{% block conteudo %}
+	<h3>Atualiza dados do Funcionário</h3>
+
+	<form method="post">
+		{% csrf_token%}	
+		
+		<label>Nome:</label>
+		{{ form.nome }}
+
+		<br><br>
+		
+		<label>SobreNome:</label>
+		{{ form.sobrenome }}
+		
+		<br><br>
+		
+		<label>cpf:</label>
+		{{ form.cpf }}
+		
+		<br><br>
+		
+		<label>Telefone:</label>
+		{{ form.telefone }}
+
+		<br><br>
+		
+		<label>Endereço:</label>
+		{{ form.endereco }}
+
+		<br><br>
+
+		<label>Email:</label>
+		{{ form.email }}
+
+		<br><br>
+
+		<label>Cidade:</label>
+		{{ form.cidade }}
+
+		<br><br>
+
+		<label>Estado:</label>
+		{{ form.estado }}
+
+		<br><br>
+
+		<label>Valor de Crédito:</label>
+		{{ form.valorcredito }}
+
+		<br><br>
+		<button class="btn btn-success">Salvar</button>
+		<a href="{% url 'index' %}"><button type="button" class="btn btn-danger">Cancelar</button></a>
+				
+	</form>
+
+
+{% endblock %}
